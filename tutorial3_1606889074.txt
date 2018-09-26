@@ -1,0 +1,37 @@
+localhost:8080/pilot/add?id=1&licenseNumber=1234&name=Jono&flyHour=20
+Pertanyaan 1?: apakah hasilnya? Jika error, tuliskan penjelasan Anda.
+
+Halaman menunjukkan "Data Berhasil Ditambahkan". Hal ini menunjukkan bahwa objek pilot dengan attribut yang tertera pada parameter diatas telah berhasil disimpan.
+
+localhost:8080/pilot/add?id=1&licenseNumber=1234&name=Jono
+Pertanyaan 2: ?apakah hasilnya? Jika error, tuliskan penjelasan Anda.
+
+Terjadi error karena parameter flyHour tidak ada, padahal bersifat required.
+
+localhost:8080/pilot/add?id=1&licenseNumber=1234&name=Jono&flyHour=20
+localhost:8080/pilot/view?licenseNumber=1234
+Pertanyaan 3?: apakah data Pilot tersebut muncul? Jika tidak, mengapa?
+
+Data pilot muncul.
+
+localhost:8080/pilot/view?licenseNumber=1234
+Pertanyaan 4?: apakah data Pilot tersebut muncul? Jika tidak, mengapa?
+
+Terjadi error karena tidak bisa parsing di class PilotController method view saat getPilotDetailByLicenseNumber. Tidak bisa parsing karena data tidak ada di ArrayList data access object. Hal ini disebabkan karena saat program dijalankan ulang, data tersebut ter-reset ulang juga.
+
+localhost:8080/pilot/add?id=1&licenseNumber=1234&name=Jono&flyHour=20
+localhost:8080/pilot/viewall
+Pertanyaan 5?: apakah data Pilot tersebut muncul?
+
+Data pilot tersebut muncul
+
+Coba tambahkan data Pilot lainnya dengan NPM yang berbeda, 
+(localhost:8080/pilot/add?id=2&licenseNumber=1907&name=Fawwaz&flyHour=17)
+lalu buka
+localhost:8080/pilot/viewall
+Pertanyaan 6?: Apakah semua data Pilot muncul?
+
+Data semua pilot tersebut muncul
+
+
+
